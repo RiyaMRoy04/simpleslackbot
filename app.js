@@ -2,9 +2,9 @@ var Botkit = require('botkit');
 var express = require('express');
 
 var middleware = require('botkit-middleware-watson')({
-  username: "38993956-e2c7-44ef-9f47-8c919fabfb2d",
-  password: "6BwipxfifYuD",
-  workspace_id: "b9eb1349-d216-4658-b7d1-e23b68ccd310",
+  username: "YOUR_WATSON_CONVERSATION_USERNAME",
+  password: "YOUR_WATSON_CONVERSATION_PASSWORD",
+  workspace_id: "YOUR_WATSON_CONVERSATION_WORKSPACE_ID",
   version_date: '2016-09-20'
 });
 
@@ -12,7 +12,7 @@ var middleware = require('botkit-middleware-watson')({
 // Configure your bot.
 var slackController = Botkit.slackbot();
 var slackBot = slackController.spawn({
-  token: "xoxb-187333742785-JZIXnGbVCAOhCbWh5mNeSEU7"
+  token: "YOUR_SLACKBOT_API_TOKEN"
 });
 
 slackController.hears(['.*'], ['direct_message', 'direct_mention', 'mention'], function(bot, message) {
